@@ -50,12 +50,42 @@ h1, h2, h3, h4, h5, h6 {
 /* NAVBAR */
 .navbar {
     background-color: var(--background) !important;
+    transition: padding 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-scrolled {
+    background-color: rgba(229, 240, 241, 0.92) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 16px rgba(44, 62, 80, 0.12) !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+}
+
+.navbar-scrolled .navbar-brand {
+    font-size: 19px;
+}
+
+/* SCROLL REVEAL */
+.reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .navbar-brand {
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     color: var(--primary) !important;
+    transition: font-size 0.3s ease;
 }
 
 .navbar-brand:hover {
