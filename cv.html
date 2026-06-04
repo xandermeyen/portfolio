@@ -11,7 +11,9 @@
     
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
     <!-- Swiper CSS -->
     <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     
@@ -36,7 +38,7 @@
                         <a class="nav-link active" href="cv.html">CV</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="hobby.html">Hobby</a>
+                        <a class="nav-link" href="over-mij.html">Over Mij</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="ervaring.html">Ervaring</a>
@@ -54,20 +56,39 @@
         <div class="container">
             <h1 class="text-center mb-5 fw-bold">Mijn CV</h1>
 
-            <!-- CV Images -->
+            <!-- Intro + Download -->
             <div class="row mb-5">
-                <div class="col-lg-8 mx-auto">
-                    <img src="img/CvPage1.jpg" alt="CV Xander Meyen pagina 1" class="cv-image w-100">
-                    <img src="img/CvPage2.jpg" alt="CV Xander Meyen pagina 2" class="cv-image w-100">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="lead text-muted mb-4">Student Graduaat Programmeren aan Thomas More, met een achtergrond in game development aan Howest. Ik combineer web, software en game development en werk het liefst aan projecten die er ook echt staan. Voor alle details kan je hieronder mijn volledige cv downloaden.</p>
+                    <a href="cv-xander-meyen.pdf" download class="btn btn-accent btn-lg">&#128229; Download CV (PDF)</a>
                 </div>
             </div>
 
-            <!-- Download Button -->
-            <div class="row mb-5">
-                <div class="col-md-6 mx-auto text-center">
-                    <a href="cv2025.pdf" download class="btn btn-accent btn-lg">
-                        📥 Download CV
-                    </a>
+            <!-- Quick facts -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-6 col-lg-3">
+                    <div class="cv-fact">
+                        <h3 class="cv-fact-title">Opleiding</h3>
+                        <p>Graduaat Programmeren<br>Thomas More, Geel</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="cv-fact">
+                        <h3 class="cv-fact-title">Achtergrond</h3>
+                        <p>Game Development<br>Howest, Kortrijk</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="cv-fact">
+                        <h3 class="cv-fact-title">Focus</h3>
+                        <p>Web, software &amp; game development</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="cv-fact">
+                        <h3 class="cv-fact-title">Talen</h3>
+                        <p>Nederlands &amp; Engels</p>
+                    </div>
                 </div>
             </div>
 
@@ -83,44 +104,80 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="skill-card">
-                                        <img src="img/skills/htmlCss.png" alt="HTML & CSS" class="skill-img">
-                                        <h5 class="skill-title">HTML & CSS</h5>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="skill-card">
-                                        <img src="img/skills/js.png" alt="JavaScript" class="skill-img">
-                                        <h5 class="skill-title">JavaScript</h5>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="skill-card">
-                                        <img src="img/skills/cSharp.png" alt="C#" class="skill-img">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" class="skill-img">
                                         <h5 class="skill-title">C#</h5>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="skill-card">
-                                        <img src="img/skills/cpp.png" alt="C++" class="skill-img">
-                                        <h5 class="skill-title">C++</h5>
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt=".NET" class="skill-img">
+                                        <h5 class="skill-title">.NET</h5>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="skill-card">
-                                        <img src="img/skills/sql.png" alt="SQL" class="skill-img">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" alt=".NET MAUI" class="skill-img">
+                                        <h5 class="skill-title">.NET MAUI</h5>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="skill-card">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blazor/blazor-original.svg" alt="Blazor" class="skill-img">
+                                        <h5 class="skill-title">Blazor</h5>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="skill-card">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-img">
+                                        <h5 class="skill-title">JavaScript</h5>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="skill-card">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="skill-img">
+                                        <h5 class="skill-title">TypeScript</h5>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="skill-card">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-img">
+                                        <h5 class="skill-title">HTML5</h5>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="skill-card">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-img">
+                                        <h5 class="skill-title">CSS3</h5>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="skill-card">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL" class="skill-img">
                                         <h5 class="skill-title">SQL</h5>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="skill-card">
-                                        <img src="img/skills/bootstrap.png" alt="Bootstrap" class="skill-img">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="skill-img">
                                         <h5 class="skill-title">Bootstrap</h5>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="skill-card">
-                                        <img src="img/skills/git.png" alt="Git" class="skill-img">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress" class="skill-img">
+                                        <h5 class="skill-title">WordPress</h5>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="skill-card">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-img">
                                         <h5 class="skill-title">Git</h5>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="skill-card">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="skill-img">
+                                        <h5 class="skill-title">Docker</h5>
                                     </div>
                                 </div>
                             </div>
@@ -141,22 +198,32 @@
     <!-- FOOTER -->
     <footer class="footer-section bg-dark text-light py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 mb-4 mb-md-0">
-                    <h5 class="mb-3">Xander Meyen</h5>
-                    <p>&copy; 2025 Xander Meyen. Alle rechten voorbehouden.</p>
-                </div>
-                <div class="col-md-6">
-                    <h5 class="mb-3">Volg mij</h5>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/xander-meyen-683845220" target="_blank" class="text-light me-3">
-                            <i class="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                        <a href="mailto:xander.meyen@gmail.com" class="text-light">
-                            <i class="fas fa-envelope"></i> Email
-                        </a>
+            <div class="row gy-4">
+                <div class="col-lg-7">
+                    <p class="footer-name">Xander Meyen</p>
+                    <p class="footer-tagline">Software &amp; Web Developer. Student Graduaat Programmeren aan Thomas More, met een achtergrond in game development.</p>
+                    <p class="footer-loc">Belgi&euml;</p>
+                    <p class="footer-cta">Interesse om samen te werken? <a href="contact.html">Neem contact op.</a></p>
+                    <div class="footer-social">
+                        <a href="mailto:xander.meyen@gmail.com" class="footer-social-link" title="E-mail"><i class="bi bi-envelope-fill"></i></a>
+                        <a href="https://www.linkedin.com/in/xander-meyen-683845220/" target="_blank" class="footer-social-link" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://github.com/xandermeyen" target="_blank" class="footer-social-link" title="GitHub"><i class="bi bi-github"></i></a>
                     </div>
                 </div>
+                <div class="col-6 col-lg-4 offset-lg-1">
+                    <h3 class="footer-heading">Navigatie</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cv.html">CV</a></li>
+                        <li><a href="ervaring.html">Ervaring</a></li>
+                        <li><a href="over-mij.html">Over Mij</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Xander Meyen. Alle rechten voorbehouden.</p>
+                <p>Gebouwd met HTML, CSS &amp; Bootstrap</p>
             </div>
         </div>
     </footer>

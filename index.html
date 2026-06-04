@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Portfolio Xander Meyen">
+    <meta name="description" content="Portfolio van Xander Meyen, student Graduaat Programmeren aan Thomas More. Web- en softwareontwikkelaar met projecten in C#, .NET, Blazor en JavaScript.">
     <meta name="keywords" content="HTML, CSS, Bootstrap">
     <meta name="author" content="Xander Meyen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,9 @@
     
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
@@ -33,7 +35,7 @@
                         <a class="nav-link" href="cv.html">CV</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="hobby.html">Hobby</a>
+                       <a class="nav-link" href="over-mij.html">Over Mij</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="ervaring.html">Ervaring</a>
@@ -52,9 +54,10 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <div class="hero-content">
-                        <h1 class="display-4 fw-bold mb-4">Hi, ik ben Xander – <br><span class="text-accent">Programmeur & Developer</span></h1>
-                        <p class="lead mb-4">Ik ben Xander Meyen, 21 jaar en studeer programmeren aan Thomas More. Eerder heb ik een jaar game development gevolgd aan Howest Kortrijk, waar ik veel technische ervaring heb opgedaan. Momenteel richt ik mij vooral op het ontwikkelen van applicaties en websites.</p>
-                        <a href="contact.html" class="btn btn-accent btn-lg">Let's talk</a>
+                        <h1 class="display-4 fw-bold mb-4">Hi, ik ben Xander – <br><span class="text-accent">Software & Web Developer</span></h1>
+                        <p class="lead mb-4">Een beginnend developer met een brede interesse in web, software en games. Ik studeer programmeren aan Thomas More en bouw verder op een achtergrond in game development. Het liefst werk ik aan projecten die er ook echt staan, van een live escape room tot een website voor een echte vereniging.</p>
+                        <a href="ervaring.html" class="btn btn-accent btn-lg me-2">Bekijk mijn werk</a>
+                        <a href="contact.html" class="btn btn-outline-accent btn-lg">Let's talk</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -63,6 +66,49 @@
                         <img src="img/profile.jpg" alt="Xander Meyen" class="img-profile">
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section class="featured-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-2 fw-bold">Uitgelichte projecten</h2>
+            <p class="text-center text-muted mb-5">Een greep uit waar ik recent aan gewerkt heb</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <a href="https://bureau-x.be" target="_blank" class="featured-card">
+                        <div class="featured-body">
+                            <p class="project-type">Webproject &bull; Live</p>
+                            <h3>Bureau X</h3>
+                            <p>Een online escape room platform dat volledig in de browser speelt, met focus op sfeer, verhaal en puzzels.</p>
+                            <span class="btn btn-accent btn-sm mt-3 align-self-start">Bekijk live &rarr;</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <a href="ervaring.html" class="featured-card">
+                        <div class="featured-body">
+                            <p class="project-type">Teamproject &bull; Klantopdracht</p>
+                            <h3>Clickshot vzw</h3>
+                            <p>Een vernieuwde website voor een fotoclub met een publiek gedeelte en een beveiligde ledenzone met forum, polls en reservaties.</p>
+                            <span class="btn btn-outline-accent btn-sm mt-3 align-self-start">Meer info &rarr;</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <a href="https://github.com/xandermeyen/AirsoftEquipmentTracker" target="_blank" class="featured-card">
+                        <div class="featured-body">
+                            <p class="project-type">Persoonlijk project &bull; In ontwikkeling</p>
+                            <h3>Airsoft Equipment Tracker</h3>
+                            <p>Een Blazor-webapp om airsoft-uitrusting te beheren: replicas, gear en loadouts in één overzichtelijk dashboard.</p>
+                            <span class="btn btn-accent btn-sm mt-3 align-self-start">Bekijk op GitHub &rarr;</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="ervaring.html" class="btn btn-outline-accent">Bekijk alle projecten</a>
             </div>
         </div>
     </section>
@@ -89,10 +135,10 @@
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <a href="hobby.html" class="card reference-card h-100 text-decoration-none">
+                    <a href="over-mij.html" class="card reference-card h-100 text-decoration-none">
                         <div class="card-body text-center">
-                            <h3 class="card-title h4 mb-3">🎮 Hobby's</h3>
-                            <p class="card-text">Ontdek wat ik graag doe in mijn vrije tijd</p>
+                            <h3 class="card-title h4 mb-3">🙋 Over Mij</h3>
+                            <p class="card-text">Ontdek wie ik ben en wat ik doe buiten het programmeren</p>
                         </div>
                     </a>
                 </div>
@@ -111,22 +157,32 @@
     <!-- FOOTER -->
     <footer class="footer-section bg-dark text-light py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 mb-4 mb-md-0">
-                    <h5 class="mb-3">Xander Meyen</h5>
-                    <p>&copy; 2025 Xander Meyen. Alle rechten voorbehouden.</p>
-                </div>
-                <div class="col-md-6">
-                    <h5 class="mb-3">Volg mij</h5>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/xander-meyen-683845220" target="_blank" class="text-light me-3">
-                            <i class="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                        <a href="mailto:xander.meyen@gmail.com" class="text-light">
-                            <i class="fas fa-envelope"></i> Email
-                        </a>
+            <div class="row gy-4">
+                <div class="col-lg-7">
+                    <p class="footer-name">Xander Meyen</p>
+                    <p class="footer-tagline">Software &amp; Web Developer. Student Graduaat Programmeren aan Thomas More, met een achtergrond in game development.</p>
+                    <p class="footer-loc">Belgi&euml;</p>
+                    <p class="footer-cta">Interesse om samen te werken? <a href="contact.html">Neem contact op.</a></p>
+                    <div class="footer-social">
+                        <a href="mailto:xander.meyen@gmail.com" class="footer-social-link" title="E-mail"><i class="bi bi-envelope-fill"></i></a>
+                        <a href="https://www.linkedin.com/in/xander-meyen-683845220/" target="_blank" class="footer-social-link" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://github.com/xandermeyen" target="_blank" class="footer-social-link" title="GitHub"><i class="bi bi-github"></i></a>
                     </div>
                 </div>
+                <div class="col-6 col-lg-4 offset-lg-1">
+                    <h3 class="footer-heading">Navigatie</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cv.html">CV</a></li>
+                        <li><a href="ervaring.html">Ervaring</a></li>
+                        <li><a href="over-mij.html">Over Mij</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Xander Meyen. Alle rechten voorbehouden.</p>
+                <p>Gebouwd met HTML, CSS &amp; Bootstrap</p>
             </div>
         </div>
     </footer>

@@ -156,7 +156,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .reference-card {
     background-color: var(--background);
-    border-left: 5px solid var(--accent);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -242,30 +241,123 @@ h1, h2, h3, h4, h5, h6 {
 
 /* FOOTER */
 .footer-section {
-    background-color: #1a1a1a !important;
-    border-top: 5px solid var(--accent);
+    background-color: #14181d !important;
     margin-top: 60px;
 }
 
-.footer-section h5 {
+.footer-name {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: white;
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
 }
 
-.footer-section p {
-    color: #ccc;
-    font-size: 0.95rem;
+.footer-tagline {
+    color: #9aa3ad;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    max-width: 340px;
+    margin-bottom: 14px;
 }
 
-.social-links a {
+.footer-loc {
+    color: #9aa3ad;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.footer-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 18px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #9aa3ad;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.25s ease, padding-left 0.25s ease;
     font-size: 0.95rem;
 }
 
-.social-links a:hover {
-    color: var(--accent) !important;
+.footer-links a:hover {
+    color: var(--accent);
+    padding-left: 4px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 45px;
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-bottom p {
+    color: #6f7782;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.footer-cta {
+    font-size: 0.9rem;
+    color: #c8cfd6;
+    margin-top: 18px;
+    margin-bottom: 4px;
+}
+
+.footer-cta a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.25s ease;
+}
+
+.footer-cta a:hover {
+    color: #5a9fc4;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.footer-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.07);
+    color: #9aa3ad;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.footer-social-link:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-2px);
 }
 
 /* CV PAGE */
@@ -279,6 +371,31 @@ h1, h2, h3, h4, h5, h6 {
     margin: 40px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+}
+
+.cv-fact {
+    background-color: var(--background);
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    text-align: center;
+}
+
+.cv-fact-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.cv-fact p {
+    color: #555;
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.6;
 }
 
 /* SKILLS CAROUSEL */
@@ -388,6 +505,99 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* OVER MIJ / ABOUT PAGE */
+.about-hero {
+    background: linear-gradient(135deg, rgba(109, 178, 214, 0.12) 0%, rgba(45, 62, 80, 0.06) 100%);
+    border-bottom: 1px solid rgba(109, 178, 214, 0.2);
+}
+
+.about-profile-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.about-hero-text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.about-hobby-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.about-hobby-card {
+    background: white;
+    padding: 36px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.about-hobby-card h2 {
+    font-size: 1.6rem;
+}
+
+.about-hobby-card p {
+    font-size: 0.97rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.about-hobby-tag {
+    display: inline-block;
+    background: rgba(109, 178, 214, 0.15);
+    color: var(--accent);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.about-traits-section {
+    background-color: white;
+}
+
+.about-trait-card {
+    background-color: var(--background);
+    padding: 30px 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    height: 100%;
+}
+
+.about-trait-card h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.about-trait-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .about-profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-hobby-card {
+        padding: 24px;
+    }
+}
+
 /* HOBBY PAGE */
 .hobby-intro {
     text-align: center;
@@ -401,7 +611,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .hobby-category {
     background-color: rgba(109, 178, 214, 0.05);
-    border-left: 5px solid var(--accent);
     padding: 40px;
     border-radius: 8px;
     margin-bottom: 60px;
@@ -465,7 +674,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color: white;
     padding: 25px;
     border-radius: 8px;
-    border-left: 4px solid var(--accent);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
@@ -551,9 +759,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .project-card {
     background-color: white;
-    border-left: 5px solid var(--accent);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
     margin-bottom: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0;
 }
 
 .project-image {
@@ -575,6 +785,108 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--accent);
     font-weight: 600;
     font-size: 0.875rem;
+}
+
+/* Uniform project cover (image or placeholder) */
+.project-cover {
+    height: 100%;
+    min-height: 240px;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--primary);
+}
+
+.project-cover.placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+    color: #fff;
+    font-size: 4rem;
+}
+
+.project-body {
+    padding: 30px;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 14px 0 18px;
+}
+
+.tech-tag {
+    background: rgba(109, 178, 214, 0.15);
+    color: var(--primary);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+@media (max-width: 767px) {
+    .project-cover {
+        min-height: 200px;
+    }
+}
+
+/* FEATURED PROJECTS (home) */
+.featured-section {
+    background-color: var(--background);
+}
+
+.featured-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.featured-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.featured-thumb {
+    height: 190px;
+    background-size: cover;
+    background-position: center;
+    background: linear-gradient(135deg, var(--accent), var(--primary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+.featured-body {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 230px;
+}
+
+.featured-body h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.featured-body p {
+    color: #666;
+    font-size: 0.92rem;
+    flex-grow: 1;
+}
+
+.featured-body .project-type {
+    margin-bottom: 10px;
 }
 
 .project-link {
@@ -599,7 +911,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color: white;
     padding: 25px;
     border-radius: 8px;
-    border-left: 4px solid var(--accent);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 

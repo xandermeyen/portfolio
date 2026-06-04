@@ -11,7 +11,9 @@
     
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
@@ -33,7 +35,7 @@
                         <a class="nav-link" href="cv.html">CV</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="hobby.html">Hobby</a>
+                        <a class="nav-link" href="over-mij.html">Over Mij</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="ervaring.html">Ervaring</a>
@@ -73,93 +75,30 @@
                 <div class="col-lg-8 mx-auto">
                     <h2 class="mb-4 fw-bold">Of stuur me een bericht</h2>
                     
-                    <form action="https://tm-statweb.be/forms.php" method="POST" class="contact-form" novalidate>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="naam" class="form-label fw-bold">Naam *</label>
-                                <input type="text" class="form-control" id="naam" name="naam" required>
-                                <div class="invalid-feedback">
-                                    Voer alstublieft je naam in.
-                                </div>
-                            </div>
+                    <form action="https://formsubmit.co/1ad8c0ec33e117722f78c0ce4fc3d09a" method="POST" class="contact-form" novalidate>
+                        <!-- FormSubmit instellingen -->
+                        <input type="hidden" name="_subject" value="Nieuw bericht via portfolio">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
 
-                            <div class="col-md-6 mb-3">
-                                <label for="voornaam" class="form-label fw-bold">Voornaam *</label>
-                                <input type="text" class="form-control" id="voornaam" name="voornaam" required>
-                                <div class="invalid-feedback">
-                                    Voer alstublieft je voornaam in.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="email" class="form-label fw-bold">E-mailadres *</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
-                                <div class="invalid-feedback">
-                                    Voer alstublieft een geldig e-mailadres in.
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 mb-3">
-                                <label for="telefoon" class="form-label fw-bold">Telefoon</label>
-                                <input type="tel" class="form-control" id="telefoon" name="telefoon">
+                        <div class="mb-3">
+                            <label for="naam" class="form-label fw-bold">Naam *</label>
+                            <input type="text" class="form-control" id="naam" name="naam" required>
+                            <div class="invalid-feedback">
+                                Voer alstublieft je naam in.
                             </div>
                         </div>
 
                         <div class="mb-3">
-                            <label for="studierichting" class="form-label fw-bold">Studierichting</label>
-                            <input type="text" class="form-control" id="studierichting" name="studierichting">
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="adres" class="form-label fw-bold">Adres</label>
-                                <input type="text" class="form-control" id="adres" name="adres">
-                            </div>
-
-                            <div class="col-md-6 mb-3">
-                                <label for="woonplaats" class="form-label fw-bold">Woonplaats</label>
-                                <input type="text" class="form-control" id="woonplaats" name="woonplaats">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="land" class="form-label fw-bold">Land</label>
-                                <input type="text" class="form-control" id="land" name="land">
-                            </div>
-
-                            <div class="col-md-6 mb-3">
-                                <label for="interesse" class="form-label fw-bold">Interesse in skills</label>
-                                <select class="form-select" id="interesse" name="interesse">
-                                    <option value="">Selecteer een skill...</option>
-                                    <option value="html-css">HTML & CSS</option>
-                                    <option value="javascript">JavaScript</option>
-                                    <option value="csharp">C#</option>
-                                    <option value="cpp">C++</option>
-                                    <option value="sql">SQL</option>
-                                    <option value="python">Python</option>
-                                    <option value="gamedev">Game Development</option>
-                                    <option value="webdev">Web Development</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="linkedin" class="form-label fw-bold">LinkedIn</label>
-                                <input type="url" class="form-control" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/...">
-                            </div>
-
-                            <div class="col-md-6 mb-3">
-                                <label for="discord" class="form-label fw-bold">Discord</label>
-                                <input type="text" class="form-control" id="discord" name="discord" placeholder="Gebruikersnaam#1234">
+                            <label for="email" class="form-label fw-bold">E-mailadres *</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                            <div class="invalid-feedback">
+                                Voer alstublieft een geldig e-mailadres in.
                             </div>
                         </div>
 
                         <div class="mb-4">
-                            <label for="bericht" class="form-label fw-bold">Vraag / Bericht *</label>
+                            <label for="bericht" class="form-label fw-bold">Bericht *</label>
                             <textarea class="form-control" id="bericht" name="bericht" rows="6" required></textarea>
                             <div class="invalid-feedback">
                                 Voer alstublieft je bericht in.
@@ -174,24 +113,34 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer-section bg-dark text-light py-5 mt-5">
+    <footer class="footer-section bg-dark text-light py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 mb-4 mb-md-0">
-                    <h5 class="mb-3">Xander Meyen</h5>
-                    <p>&copy; 2025 Xander Meyen. Alle rechten voorbehouden.</p>
-                </div>
-                <div class="col-md-6">
-                    <h5 class="mb-3">Volg mij</h5>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/xander-meyen-683845220" target="_blank" class="text-light me-3">
-                            <i class="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                        <a href="mailto:xander.meyen@gmail.com" class="text-light">
-                            <i class="fas fa-envelope"></i> Email
-                        </a>
+            <div class="row gy-4">
+                <div class="col-lg-7">
+                    <p class="footer-name">Xander Meyen</p>
+                    <p class="footer-tagline">Software &amp; Web Developer. Student Graduaat Programmeren aan Thomas More, met een achtergrond in game development.</p>
+                    <p class="footer-loc">Belgi&euml;</p>
+                    <p class="footer-cta">Interesse om samen te werken? <a href="contact.html">Neem contact op.</a></p>
+                    <div class="footer-social">
+                        <a href="mailto:xander.meyen@gmail.com" class="footer-social-link" title="E-mail"><i class="bi bi-envelope-fill"></i></a>
+                        <a href="https://www.linkedin.com/in/xander-meyen-683845220/" target="_blank" class="footer-social-link" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://github.com/xandermeyen" target="_blank" class="footer-social-link" title="GitHub"><i class="bi bi-github"></i></a>
                     </div>
                 </div>
+                <div class="col-6 col-lg-4 offset-lg-1">
+                    <h3 class="footer-heading">Navigatie</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cv.html">CV</a></li>
+                        <li><a href="ervaring.html">Ervaring</a></li>
+                        <li><a href="over-mij.html">Over Mij</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Xander Meyen. Alle rechten voorbehouden.</p>
+                <p>Gebouwd met HTML, CSS &amp; Bootstrap</p>
             </div>
         </div>
     </footer>
