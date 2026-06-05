@@ -202,6 +202,18 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+@media (max-width: 480px) {
+    .image-circle,
+    .img-profile {
+        width: 240px;
+        height: 240px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+
 /* REFERENCES / CARDS */
 .references-section {
     background-color: white;
@@ -603,6 +615,8 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 10px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     display: block;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 .about-hero-text {
@@ -677,6 +691,10 @@ h1, h2, h3, h4, h5, h6 {
     .about-profile-img {
         width: 150px;
         height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 0 auto;
+        display: block;
     }
 
     .about-hobby-card {
