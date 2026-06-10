@@ -3,16 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Portfolio van Xander Meyen, student Graduaat Programmeren aan Thomas More. Web- en softwareontwikkelaar met projecten in C#, .NET, Blazor en JavaScript.">
-    <meta name="keywords" content="HTML, CSS, Bootstrap">
+    <meta name="description" content="Portfolio van Xander Meyen, student Graduaat Programmeren aan Thomas More. Bouwt webprojecten en software in C#, .NET, Blazor en JavaScript.">
+    <meta name="keywords" content="Xander Meyen, portfolio, developer, C#, .NET, Blazor, JavaScript">
     <meta name="author" content="Xander Meyen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xander Meyen - Portfolio</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <title>Xander Meyen | dev portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -20,182 +19,461 @@
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-        <div class="container-fluid px-4">
-            <a class="navbar-brand fw-bold" href="index.html">Xander Meyen</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cv.html">CV</a>
-                    </li>
-                    <li class="nav-item">
-                       <a class="nav-link" href="over-mij.html">Over Mij</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="ervaring.html">Ervaring</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- HERO SECTION -->
-    <section class="hero-section py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <div class="hero-content">
-                        <h1 class="display-4 fw-bold mb-4">Hi, ik ben Xander – <br><span class="text-accent">Software & Web Developer</span></h1>
-                        <p class="lead mb-4">Een beginnend developer met een brede interesse in web, software en games. Ik studeer programmeren aan Thomas More en bouw verder op een achtergrond in game development. Het liefst werk ik aan projecten die er ook echt staan, van een live escape room tot een website voor een echte vereniging.</p>
-                        <a href="ervaring.html" class="btn btn-accent btn-lg me-2">Bekijk mijn werk</a>
-                        <a href="contact.html" class="btn btn-outline-accent btn-lg">Let's talk</a>
+    <!-- Scanline overlay, puur decoratief -->
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <!-- NAV -->
+    <header class="site-nav">
+        <a href="#top" class="nav-logo">
+            <span class="logo-prompt">~/</span>xander<span class="logo-cursor">_</span>
+        </a>
+        <nav class="nav-links" id="navLinks">
+            <a href="#projecten"><span class="nav-num">01</span> projecten</a>
+            <a href="#skills"><span class="nav-num">02</span> skills</a>
+            <a href="#ervaring"><span class="nav-num">03</span> ervaring</a>
+            <a href="#over-mij"><span class="nav-num">04</span> over mij</a>
+            <a href="#contact" class="nav-cta">contact</a>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu openen">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main id="top">
+
+        <!-- ===== HERO ===== -->
+        <section class="hero">
+            <div class="hero-grid" aria-hidden="true"></div>
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <p class="hero-pre">// hallo, ik ben</p>
+                    <h1 class="hero-name">Xander<br>Meyen<span class="accent">.</span></h1>
+                    <p class="hero-role">
+                        <span class="prompt">&gt;</span>
+                        <span id="typedRole">software developer</span><span class="type-cursor">█</span>
+                    </p>
+                    <p class="hero-intro">
+                        Student Graduaat Programmeren aan Thomas More. Ik bouw het liefst dingen
+                        die er ook echt staan: van een online escape room tot een website voor
+                        een echte vereniging.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projecten" class="btn btn-solid">bekijk mijn werk</a>
+                        <a href="#contact" class="btn btn-ghost">zeg hallo</a>
+                    </div>
+                    <p class="hero-hint">psst… typ <code>help</code> in de terminal onderaan, of probeer de konami code</p>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-window">
+                        <div class="code-window-bar">
+                            <span class="dot dot-r"></span>
+                            <span class="dot dot-y"></span>
+                            <span class="dot dot-g"></span>
+                            <span class="code-window-title">xander.cs</span>
+                        </div>
+                        <pre class="code-body"><code><span class="c-kw">var</span> <span class="c-var">xander</span> = <span class="c-kw">new</span> <span class="c-type">Developer</span>
+{
+    Studie    = <span class="c-str">"Graduaat Programmeren"</span>,
+    School    = <span class="c-str">"Thomas More, Geel"</span>,
+    Stack     = [<span class="c-str">"C#"</span>, <span class="c-str">".NET"</span>, <span class="c-str">"Blazor"</span>, <span class="c-str">"JS"</span>],
+    Bijbaan   = <span class="c-str">"scare actor"</span>  <span class="c-com">// echt waar</span>
+};
+
+<span class="c-kw">while</span> (<span class="c-var">xander</span>.<span class="c-fn">Leeft</span>())
+    <span class="c-var">xander</span>.<span class="c-fn">BouwIets</span>(<span class="c-var">datEchtWerkt</span>: <span class="c-kw">true</span>);</code></pre>
+                    </div>
+                    <img src="img/profile.jpg" alt="Xander Meyen" class="hero-photo">
+                </div>
+            </div>
+            <a href="#projecten" class="scroll-down" aria-label="Scroll naar projecten">▼</a>
+        </section>
+
+        <!-- ===== PROJECTEN ===== -->
+        <section id="projecten" class="section">
+            <div class="section-head reveal">
+                <h2><span class="section-num">01.</span> Projecten</h2>
+                <p class="section-sub">een greep uit wat ik gebouwd heb</p>
+            </div>
+
+            <div class="projects">
+
+                <!-- Bureau X -->
+                <article class="project reveal">
+                    <div class="project-img">
+                        <img src="img/projects/bureaux.jpg" alt="Screenshot van Bureau X escape room" loading="lazy">
+                        <span class="project-status status-live">● live</span>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-kicker">persoonlijk webproject</p>
+                        <h3>Bureau X</h3>
+                        <p>
+                            Een online escape room die volledig in de browser speelt, als digitaal
+                            alternatief voor een fysieke escape room. Alles draait om sfeer, verhaal
+                            en puzzels. De eerste experience staat live en het platform is gebouwd om
+                            er later nieuwe verhalen aan toe te voegen.
+                        </p>
+                        <ul class="tags">
+                            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://bureau-x.be" target="_blank" rel="noopener">speel hem zelf ↗</a>
+                            <a href="https://github.com/xandermeyen/Escape-room" target="_blank" rel="noopener">github ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Clickshot -->
+                <article class="project reveal">
+                    <div class="project-img">
+                        <img src="img/projects/clickshot.jpg" alt="Screenshot van de Clickshot vzw website" loading="lazy">
+                        <span class="project-status status-client">● klantopdracht</span>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-kicker">teamproject &middot; Thomas More</p>
+                        <h3>Clickshot vzw</h3>
+                        <p>
+                            Een volledig vernieuwde website voor een fotoclub, gebouwd in team voor een
+                            echte opdrachtgever. Publiek gedeelte plus een beveiligde ledenzone met login,
+                            forum, polls, documenten, een reservatiesysteem voor de studio en een agenda.
+                            Mijn rol: pagina's en functionaliteit bouwen en feedback van de klant verwerken.
+                        </p>
+                        <ul class="tags">
+                            <li>WordPress</li><li>Elementor</li><li>Ultimate Member</li><li>WPForms</li>
+                        </ul>
+                        <p class="project-note">privé klantproject, samen met Timur Nuradilov en Yusuf Yerlikaya</p>
+                    </div>
+                </article>
+
+                <!-- Airsoft Tracker -->
+                <article class="project reveal">
+                    <div class="project-img">
+                        <img src="img/projects/airsoft.png" alt="Dashboard van de Airsoft Equipment Tracker" loading="lazy">
+                        <span class="project-status status-wip">● in ontwikkeling</span>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-kicker">persoonlijk project</p>
+                        <h3>Airsoft Equipment Tracker</h3>
+                        <p>
+                            Een Blazor-webapp om airsoft-uitrusting te beheren: replicas, gear en loadouts
+                            in één dashboard. Dit is mijn oefenterrein voor propere architectuur met models,
+                            services en herbruikbare componenten, plus data binding en state management.
+                        </p>
+                        <ul class="tags">
+                            <li>Blazor</li><li>.NET</li><li>C#</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/xandermeyen/AirsoftEquipmentTracker" target="_blank" rel="noopener">github ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tower Defense -->
+                <article class="project reveal">
+                    <div class="project-img">
+                        <img src="img/projects/Project1Screen.jpg" alt="Screenshot van de Tower Defense game" loading="lazy">
+                        <span class="project-status status-done">● afgerond</span>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-kicker">schoolproject &middot; GamePlayScripting</p>
+                        <h3>Tower Defense Game</h3>
+                        <p>
+                            Een wave-based tower defense met meerdere vijandtypen, upgrades, bossfights
+                            en een GUI met health indicator. De kernsystemen zoals vijandlogica, gameplay,
+                            animaties en upgrades heb ik volledig zelf geïmplementeerd.
+                        </p>
+                        <ul class="tags">
+                            <li>C++</li><li>OpenGL</li><li>SDL</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/xandermeyen/DAE-Tower_Defence/releases/tag/v1.2.0" target="_blank" rel="noopener">github ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ===== SKILLS ===== -->
+        <section id="skills" class="section">
+            <div class="section-head reveal">
+                <h2><span class="section-num">02.</span> Skills</h2>
+                <p class="section-sub">waar ik mee werk, eerlijk ingeschat</p>
+            </div>
+
+            <div class="skills-wrap reveal">
+                <div class="skill-block">
+                    <h3 class="skill-block-title">// talen</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar" data-level="85"><span class="skill-name">C#</span><span class="bar"><span class="bar-fill"></span></span></div>
+                        <div class="skill-bar" data-level="75"><span class="skill-name">JavaScript</span><span class="bar"><span class="bar-fill"></span></span></div>
+                        <div class="skill-bar" data-level="80"><span class="skill-name">HTML &amp; CSS</span><span class="bar"><span class="bar-fill"></span></span></div>
+                        <div class="skill-bar" data-level="65"><span class="skill-name">TypeScript</span><span class="bar"><span class="bar-fill"></span></span></div>
+                        <div class="skill-bar" data-level="60"><span class="skill-name">SQL</span><span class="bar"><span class="bar-fill"></span></span></div>
+                        <div class="skill-bar" data-level="70"><span class="skill-name">C++</span><span class="bar"><span class="bar-fill"></span></span></div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="hero-image">
-                        <div class="image-circle"></div>
-                        <img src="img/profile.jpg" alt="Xander Meyen" class="img-profile">
+                <div class="skill-block">
+                    <h3 class="skill-block-title">// frameworks &amp; tools</h3>
+                    <ul class="skill-chips">
+                        <li>.NET</li>
+                        <li>Blazor</li>
+                        <li>.NET MAUI</li>
+                        <li>Bootstrap</li>
+                        <li>WordPress</li>
+                        <li>Elementor</li>
+                        <li>Git &amp; GitHub</li>
+                        <li>Docker</li>
+                        <li>OpenGL / SDL</li>
+                        <li>Database design</li>
+                        <li>Responsive design</li>
+                    </ul>
+                    <div class="skill-loading">
+                        <p class="skill-loading-label">momenteel aan het laden…</p>
+                        <p class="skill-loading-item">ASP.NET Core <span class="loading-dots">▮▮▮▮▮▯▯▯</span></p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FEATURED PROJECTS -->
-    <section class="featured-section py-5">
-        <div class="container">
-            <h2 class="text-center mb-2 fw-bold">Uitgelichte projecten</h2>
-            <p class="text-center text-muted mb-5">Een greep uit waar ik recent aan gewerkt heb</p>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4 reveal">
-                    <a href="https://bureau-x.be" target="_blank" class="featured-card">
-                        <div class="featured-body">
-                            <p class="project-type">Webproject &bull; Live</p>
-                            <h3>Bureau X</h3>
-                            <p>Een online escape room platform dat volledig in de browser speelt, met focus op sfeer, verhaal en puzzels.</p>
-                            <span class="btn btn-accent btn-sm mt-3 align-self-start">Bekijk live &rarr;</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-4 reveal" data-delay="100">
-                    <a href="ervaring.html" class="featured-card">
-                        <div class="featured-body">
-                            <p class="project-type">Teamproject &bull; Klantopdracht</p>
-                            <h3>Clickshot vzw</h3>
-                            <p>Een vernieuwde website voor een fotoclub met een publiek gedeelte en een beveiligde ledenzone met forum, polls en reservaties.</p>
-                            <span class="btn btn-outline-accent btn-sm mt-3 align-self-start">Meer info &rarr;</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-4 reveal" data-delay="200">
-                    <a href="https://github.com/xandermeyen/AirsoftEquipmentTracker" target="_blank" class="featured-card">
-                        <div class="featured-body">
-                            <p class="project-type">Persoonlijk project &bull; In ontwikkeling</p>
-                            <h3>Airsoft Equipment Tracker</h3>
-                            <p>Een Blazor-webapp om airsoft-uitrusting te beheren: replicas, gear en loadouts in één overzichtelijk dashboard.</p>
-                            <span class="btn btn-accent btn-sm mt-3 align-self-start">Bekijk op GitHub &rarr;</span>
-                        </div>
-                    </a>
-                </div>
+        <!-- ===== ERVARING ===== -->
+        <section id="ervaring" class="section">
+            <div class="section-head reveal">
+                <h2><span class="section-num">03.</span> Ervaring</h2>
+                <p class="section-sub">git log --werk --school</p>
             </div>
-            <div class="text-center mt-5">
-                <a href="ervaring.html" class="btn btn-outline-accent">Bekijk alle projecten</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- REFERENCES SECTION -->
-    <section class="references-section py-5 bg-white">
-        <div class="container">
-            <h2 class="text-center mb-5 fw-bold">Meer over mij</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3 reveal">
-                    <a href="cv.html" class="card reference-card h-100 text-decoration-none">
-                        <div class="card-body text-center">
-                            <h3 class="card-title h4 mb-3">📄 CV</h3>
-                            <p class="card-text">Bekijk mijn curriculum vitae met opleiding en werkervaring</p>
+            <div class="log-cols">
+                <div class="log-col reveal">
+                    <h3 class="log-title">$ git log --werk</h3>
+                    <div class="log">
+                        <div class="log-item">
+                            <span class="log-hash">a3f9e1c</span>
+                            <div>
+                                <h4>Scare Actor <span class="log-where">@ Bobbejaanland</span></h4>
+                                <p class="log-date">2024 → nu</p>
+                                <p>Verschillende personages en shows. Entertainment, karakterbewustzijn en publieksinteractie. Mensen doen schrikken als bijbaan, dus ja.</p>
+                            </div>
                         </div>
-                    </a>
+                        <div class="log-item">
+                            <span class="log-hash">7b2d04f</span>
+                            <div>
+                                <h4>Winkelmedewerker <span class="log-where">@ Spar, Diest</span></h4>
+                                <p class="log-date">nov 2021 → nu</p>
+                                <p>Kassa, rekken aanvullen, winkel netjes houden.</p>
+                            </div>
+                        </div>
+                        <div class="log-item">
+                            <span class="log-hash">c91a87b</span>
+                            <div>
+                                <h4>Arbeider <span class="log-where">@ TI Automotive, Paal</span></h4>
+                                <p class="log-date">sep 2025</p>
+                                <p>Leidingclips klaarmaken in een mal voor verdere verwerking.</p>
+                            </div>
+                        </div>
+                        <div class="log-item">
+                            <span class="log-hash">e54f2a9</span>
+                            <div>
+                                <h4>Leverancier <span class="log-where">@ Belmédis, Tessenderlo</span></h4>
+                                <p class="log-date">jul → sep 2024</p>
+                                <p>Medicijnen leveren aan apotheken.</p>
+                            </div>
+                        </div>
+                        <div class="log-item">
+                            <span class="log-hash">19d6c3e</span>
+                            <div>
+                                <h4>Logistiek medewerker <span class="log-where">@ Stanley Black &amp; Decker</span></h4>
+                                <p class="log-date">jun → okt 2023</p>
+                                <p>Dozen scannen en opvullen, palletten wikkelen.</p>
+                            </div>
+                        </div>
+                        <div class="log-item">
+                            <span class="log-hash">f08b51d</span>
+                            <div>
+                                <h4>Logistiek medewerker <span class="log-where">@ Nike, Ham</span></h4>
+                                <p class="log-date">jun → sep 2022</p>
+                                <p>Trailers laden en palletten klaarmaken.</p>
+                            </div>
+                        </div>
+                        <div class="log-item">
+                            <span class="log-hash">3ce7a20</span>
+                            <div>
+                                <h4>Operator <span class="log-where">@ H8, Bobbejaanland</span></h4>
+                                <p class="log-date">jun 2021 → nov 2022</p>
+                                <p>Bezoekers aanspreken voor een spel, opruimen en de dagopbrengst verzamelen.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 col-lg-3 reveal" data-delay="100">
-                    <a href="ervaring.html" class="card reference-card h-100 text-decoration-none">
-                        <div class="card-body text-center">
-                            <h3 class="card-title h4 mb-3">💼 Ervaring</h3>
-                            <p class="card-text">Lees meer over mijn werkervaring en projecten</p>
+
+                <div class="log-col reveal">
+                    <h3 class="log-title">$ git log --school</h3>
+                    <div class="log">
+                        <div class="log-item log-current">
+                            <span class="log-hash">HEAD</span>
+                            <div>
+                                <h4>Graduaat Programmeren <span class="log-where">@ Thomas More, Geel</span></h4>
+                                <p class="log-date">sep 2025 → nu</p>
+                                <p>Verdieping in programmeren en IT-technologie. Hier zit ik nu.</p>
+                            </div>
                         </div>
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-3 reveal" data-delay="200">
-                    <a href="over-mij.html" class="card reference-card h-100 text-decoration-none">
-                        <div class="card-body text-center">
-                            <h3 class="card-title h4 mb-3">🙋 Over Mij</h3>
-                            <p class="card-text">Ontdek wie ik ben en wat ik doe buiten het programmeren</p>
+                        <div class="log-item">
+                            <span class="log-hash">b66e9d2</span>
+                            <div>
+                                <h4>Game Development <span class="log-where">@ Howest, Kortrijk</span></h4>
+                                <p class="log-date">sep 2024 → aug 2025</p>
+                                <p>Eén jaar van de bachelor gedaan, met onder meer gameplay scripting in C++. Daarna bewust overgestapt naar het graduaat.</p>
+                            </div>
                         </div>
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-3 reveal" data-delay="300">
-                    <a href="contact.html" class="card reference-card h-100 text-decoration-none">
-                        <div class="card-body text-center">
-                            <h3 class="card-title h4 mb-3">📧 Contact</h3>
-                            <p class="card-text">Neem contact met mij op</p>
+                        <div class="log-item">
+                            <span class="log-hash">5a1c4f7</span>
+                            <div>
+                                <h4>Algemeen <span class="log-where">@ Sint-Jozef, Geel</span></h4>
+                                <p class="log-date">2023 → 2024</p>
+                            </div>
                         </div>
-                    </a>
+                        <div class="log-item">
+                            <span class="log-hash">d20e8b3</span>
+                            <div>
+                                <h4>Kantoor <span class="log-where">@ Sint-Maria, Geel</span></h4>
+                                <p class="log-date">2021 → 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="cv-xander-meyen.pdf" download class="btn btn-ghost btn-cv">↓ download volledig cv (pdf)</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- ===== OVER MIJ ===== -->
+        <section id="over-mij" class="section">
+            <div class="section-head reveal">
+                <h2><span class="section-num">04.</span> Over mij</h2>
+                <p class="section-sub">de mens achter de commits</p>
+            </div>
+
+            <div class="about-intro reveal">
+                <p>
+                    Ik ben Xander, student in Geel met een zwak voor projecten die een concreet
+                    probleem oplossen. Ideeën omzetten naar werkende software is het deel waar ik
+                    de meeste voldoening uit haal. Nieuwe technologie ontdekken, problemen
+                    uitpluizen en blijven proberen tot het werkt: dat is zo'n beetje mijn standaard modus.
+                </p>
+            </div>
+
+            <div class="hobby-cards">
+                <article class="hobby-card reveal">
+                    <img src="img/over-mij/airsoft-card.jpg" alt="Xander tijdens een airsoft game" loading="lazy">
+                    <div class="hobby-body">
+                        <span class="hobby-tag">hobby</span>
+                        <h3>Airsoft</h3>
+                        <p>
+                            Sinds 2025 sta ik regelmatig op het veld. Airsoft draait om communicatie,
+                            teamwork en snel beslissen onder druk. Toevallig exact dezelfde skills
+                            die je nodig hebt als je code om drie uur 's nachts stuk gaat.
+                        </p>
+                    </div>
+                </article>
+                <article class="hobby-card reveal">
+                    <img src="img/over-mij/scareActing.jpeg" alt="Xander als scare actor" loading="lazy">
+                    <div class="hobby-body">
+                        <span class="hobby-tag">werk &amp; hobby</span>
+                        <h3>Scare acting</h3>
+                        <p>
+                            Tijdens Halloween speel ik personages in Bobbejaanland. Improvisatie,
+                            timing en samenspel met andere acteurs, en geen enkele avond is hetzelfde.
+                            Het heeft me veel geleerd over zelfvertrouwen en op mensen afstappen.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="traits reveal">
+                <div class="trait"><span class="trait-key">leergierig:</span> <span class="trait-val">true</span></div>
+                <div class="trait"><span class="trait-key">probleemoplossend:</span> <span class="trait-val">true</span></div>
+                <div class="trait"><span class="trait-key">teamspeler:</span> <span class="trait-val">true</span></div>
+                <div class="trait"><span class="trait-key">geeftSnelOp:</span> <span class="trait-val trait-false">false</span></div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section id="contact" class="section section-contact">
+            <div class="section-head reveal">
+                <h2><span class="section-num">05.</span> Contact</h2>
+                <p class="section-sub">stuur een bericht, ik antwoord sneller dan mijn build compileert</p>
+            </div>
+
+            <div class="contact-grid reveal">
+                <div class="contact-side">
+                    <p>
+                        Een vraag, een idee of gewoon interesse om samen te werken?
+                        Mail me of gebruik het formulier.
+                    </p>
+                    <a href="mailto:xander.meyen@gmail.com" class="contact-mail">xander.meyen@gmail.com</a>
+                    <div class="contact-socials">
+                        <a href="https://github.com/xandermeyen" target="_blank" rel="noopener">github ↗</a>
+                        <a href="https://www.linkedin.com/in/xander-meyen-683845220/" target="_blank" rel="noopener">linkedin ↗</a>
+                    </div>
+                </div>
+
+                <form action="https://formsubmit.co/1ad8c0ec33e117722f78c0ce4fc3d09a" method="POST" class="contact-form" novalidate>
+                    <input type="hidden" name="_subject" value="Nieuw bericht via portfolio">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+
+                    <label for="naam"><span class="form-prompt">$</span> naam</label>
+                    <input type="text" id="naam" name="naam" required autocomplete="name">
+
+                    <label for="email"><span class="form-prompt">$</span> e-mail</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+
+                    <label for="bericht"><span class="form-prompt">$</span> bericht</label>
+                    <textarea id="bericht" name="bericht" rows="6" required></textarea>
+
+                    <button type="submit" class="btn btn-solid">verstuur →</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ===== MINI TERMINAL ===== -->
+        <section class="section section-terminal reveal">
+            <div class="terminal" id="terminal">
+                <div class="terminal-bar">
+                    <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+                    <span class="code-window-title">xander@portfolio: ~</span>
+                </div>
+                <div class="terminal-body" id="terminalBody">
+                    <p class="term-line">Welkom bij de portfolio-terminal. Typ <strong>help</strong> voor de opties.</p>
+                </div>
+                <div class="terminal-input-row">
+                    <span class="prompt">xander@portfolio:~$</span>
+                    <input type="text" id="terminalInput" autocomplete="off" spellcheck="false" aria-label="Terminal invoer">
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <!-- FOOTER -->
-    <footer class="footer-section bg-dark text-light py-5">
-        <div class="container">
-            <div class="row gy-4">
-                <div class="col-lg-7">
-                    <p class="footer-name">Xander Meyen</p>
-                    <p class="footer-tagline">Software &amp; Web Developer. Student Graduaat Programmeren aan Thomas More, met een achtergrond in game development.</p>
-                    <p class="footer-loc">Belgi&euml;</p>
-                    <p class="footer-cta">Interesse om samen te werken? <a href="contact.html">Neem contact op.</a></p>
-                    <div class="footer-social">
-                        <a href="mailto:xander.meyen@gmail.com" class="footer-social-link" title="E-mail"><i class="bi bi-envelope-fill"></i></a>
-                        <a href="https://www.linkedin.com/in/xander-meyen-683845220/" target="_blank" class="footer-social-link" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://github.com/xandermeyen" target="_blank" class="footer-social-link" title="GitHub"><i class="bi bi-github"></i></a>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-4 offset-lg-1">
-                    <h3 class="footer-heading">Navigatie</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="cv.html">CV</a></li>
-                        <li><a href="ervaring.html">Ervaring</a></li>
-                        <li><a href="over-mij.html">Over Mij</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Xander Meyen. Alle rechten voorbehouden.</p>
-                <p>Gebouwd met HTML, CSS &amp; Bootstrap</p>
-            </div>
-        </div>
+    <footer class="footer">
+        <p class="footer-line">
+            <span class="prompt">$</span> echo "© 2026 Xander Meyen · gebouwd met HTML, CSS en vanilla JS · geen frameworks gekwetst"
+        </p>
+        <p class="footer-sub">België · <a href="mailto:xander.meyen@gmail.com">mail</a> · <a href="https://github.com/xandermeyen" target="_blank" rel="noopener">github</a> · <a href="https://www.linkedin.com/in/xander-meyen-683845220/" target="_blank" rel="noopener">linkedin</a></p>
     </footer>
 
-    <button id="backToTop" class="back-to-top" aria-label="Terug naar boven">
-        <i class="bi bi-arrow-up"></i>
-    </button>
+    <!-- Achievement toast -->
+    <div class="achievement" id="achievement" role="status" aria-live="polite">
+        <span class="achievement-icon">🏆</span>
+        <div>
+            <p class="achievement-title">Achievement unlocked</p>
+            <p class="achievement-text" id="achievementText"></p>
+        </div>
+    </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="js/back-to-top.js"></script>
-    <script src="js/effects.js"></script>
+    <button id="backToTop" class="back-to-top" aria-label="Terug naar boven">↑</button>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>
