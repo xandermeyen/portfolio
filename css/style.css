@@ -185,6 +185,7 @@ a:hover { text-decoration: underline; }
     font-size: clamp(1rem, 2.2vw, 1.3rem);
     color: var(--amber);
     margin: 18px 0 20px;
+    overflow-wrap: anywhere;
 }
 .type-cursor {
     color: var(--accent);
@@ -721,6 +722,13 @@ a:hover { text-decoration: underline; }
 }
 .contact-form input.invalid,
 .contact-form textarea.invalid { border-color: var(--red); }
+
+.form-error {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--red);
+    margin-bottom: 16px;
+}
 
 .contact-form .btn { align-self: flex-start; }
 

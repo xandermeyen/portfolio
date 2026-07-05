@@ -246,6 +246,7 @@ terminalInput.addEventListener('keydown', (e) => {
 
 // ---------- Contact form: simpele validatie ----------
 const form = document.querySelector('.contact-form');
+const formError = document.getElementById('formError');
 
 if (form) {
     form.addEventListener('submit', (e) => {
@@ -253,11 +254,28 @@ if (form) {
         form.querySelectorAll('input[required], textarea[required]').forEach((field) => {
             const empty = !field.value.trim();
             const badEmail = field.type === 'email' && field.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value);
-            field.classList.toggle('invalid', empty || badEmail);
-            if (empty || badEmail) valid = false;
+            const invalid = empty || badEmail;
+            field.classList.toggle('invalid', invalid);
+            if (invalid) {
+                field.setAttribute('aria-invalid', 'true');
+                field.setAttribute('aria-describedby', 'formError');
+                valid = false;
+            } else {
+                field.removeAttribute('aria-invalid');
+                field.removeAttribute('aria-describedby');
+            }
         });
+        formError.hidden = valid;
         if (!valid) e.preventDefault();
     });
+}
+
+// Na een geslaagde verzending stuurt formsubmit terug naar ?verzonden=1#contact
+if (new URLSearchParams(window.location.search).has('verzonden')) {
+    // De sectie-achievement van #contact zou deze toast meteen overschrijven
+    unlocked.add('section-contact');
+    setTimeout(() => unlockAchievement('form', 'Bericht verzonden. Ik antwoord zo snel mogelijk.'), 600);
+    history.replaceState(null, '', window.location.pathname + window.location.hash);
 }
 
 // ---------- Kleine groet in de console, voor collega-devs ----------
