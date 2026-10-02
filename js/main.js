@@ -278,6 +278,27 @@ if (new URLSearchParams(window.location.search).has('verzonden')) {
     history.replaceState(null, '', window.location.pathname + window.location.hash);
 }
 
+// ---------- Demo-video's spelen af zodra ze in beeld komen ----------
+// Gedempt en enkel als de bezoeker geen "minder beweging" heeft ingesteld.
+// Pauzeert weer als je verder scrolt, zodat hij geen bandbreedte blijft vreten.
+const demoVideos = document.querySelectorAll('.project-video');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (demoVideos.length && !reduceMotion) {
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const video = entry.target;
+            if (entry.isIntersecting) {
+                video.play().catch(() => { /* autoplay geblokkeerd: dan klikt de bezoeker zelf op play */ });
+            } else {
+                video.pause();
+            }
+        });
+    }, { threshold: 0.5 });
+
+    demoVideos.forEach(v => videoObserver.observe(v));
+}
+
 // ---------- Kleine groet in de console, voor collega-devs ----------
 console.log(
     '%c> hallo daar, mede-dev 👋\n> leuk dat je even komt kijken. de code staat op github.com/xandermeyen',

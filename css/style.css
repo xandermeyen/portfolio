@@ -378,6 +378,13 @@ a:hover { text-decoration: underline; }
 }
 .project:hover .project-img img { filter: saturate(1.05); transform: scale(1.03); }
 
+.project-img video {
+    display: block;
+    width: 100%; height: 100%;
+    object-fit: contain;
+    background: #000;
+}
+
 .project-status {
     position: absolute;
     top: 12px; left: 12px;
@@ -868,6 +875,7 @@ body.scare-mode .scanlines { opacity: 1; }
     .project:nth-child(even) .project-img { order: 0; }
     .project-img { min-height: 200px; }
     .project-img img { max-height: 260px; }
+    .project-img video { height: auto; aspect-ratio: 16 / 10; }
 }
 
 @media (max-width: 760px) {
