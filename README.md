@@ -6,7 +6,7 @@ Alles op één pagina, donker terminal-thema, gebouwd zonder frameworks. Gewoon 
 
 ## Wat erop staat
 
-- Mijn projecten, waaronder [Bureau X](https://bureau-x.be), een online escape room
+- Mijn projecten, waaronder [Bureau X](https://bureau-x.be), een online escape room, en [Sheriff Survival](https://xandermeyen.itch.io/sheriff-survival), een game in Unity
 - Skills, werkervaring en opleiding in git log stijl
 - Een werkend contactformulier
 - Wat dingen over mij buiten de code
@@ -25,7 +25,7 @@ De site verstopt een paar dingen voor wie zoekt:
 index.html      de volledige site
 css/style.css   alle styling, custom geschreven
 js/main.js      typing effect, scroll reveal, terminal, easter eggs
-img/            foto's en screenshots
+img/            foto's, screenshots en gameplay video's
 ```
 
 De losse pagina's (cv.html, ervaring.html, over-mij.html, contact.html) zijn redirects naar de juiste sectie, zodat oude links blijven werken.

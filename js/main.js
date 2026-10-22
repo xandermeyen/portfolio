@@ -169,6 +169,7 @@ const commands = {
         '  skills      waar ik mee werk\n' +
         '  cv          download mijn cv\n' +
         '  contact     stuur me een bericht\n' +
+        '  draw        duel tegen de sheriff\n' +
         '  boo         niet doen\n' +
         '  clear       maak het scherm leeg',
 
@@ -202,6 +203,8 @@ const commands = {
         return 'navigeren naar #contact…';
     },
 
+    draw: () => startDuel(),
+
     boo: () => {
         triggerScareMode();
         return 'JE BENT GEWAARSCHUWD.';
@@ -229,6 +232,7 @@ function termPrint(text, className) {
 
 terminalInput.addEventListener('keydown', (e) => {
     if (e.key !== 'Enter') return;
+    if (duel.state !== 'idle') return;
 
     const raw = terminalInput.value.trim();
     terminalInput.value = '';
@@ -243,6 +247,89 @@ terminalInput.addEventListener('keydown', (e) => {
     } else {
         termPrint(`bash: ${cmd}: command not found (probeer 'help')`, 'term-err');
     }
+});
+
+// ---------- Draw: quick-draw duel in de terminal ----------
+const duel = { state: 'idle', timer: null, start: 0 };
+
+function readBest() {
+    try { return Number(localStorage.getItem('duelBest')) || null; } catch { return null; }
+}
+
+function saveBest(ms) {
+    try { localStorage.setItem('duelBest', String(ms)); } catch { /* geen opslag, geen probleem */ }
+}
+
+function startDuel() {
+    if (duel.state !== 'idle') return null;
+    duel.state = 'intro';
+    terminalInput.blur();
+
+    setTimeout(() => {
+        termPrint('Klaar…  (spatie of tik zodra je DRAW! ziet, esc om te stoppen)');
+        duel.state = 'ready';
+        duel.timer = setTimeout(() => {
+            termPrint('DRAW!', 'term-draw');
+            duel.state = 'draw';
+            duel.start = performance.now();
+        }, 1500 + Math.random() * 3000);
+    }, 900);
+
+    return 'Twee schutters, één stoffige straat in Dustwater.';
+}
+
+function endDuel() {
+    clearTimeout(duel.timer);
+    duel.state = 'idle';
+    termPrint("nog een keer? typ 'draw'");
+    terminalInput.focus();
+}
+
+function shoot() {
+    if (duel.state === 'ready') {
+        termPrint('Te vroeg getrokken. Je kogel raakt een cactus.', 'term-err');
+        endDuel();
+        return;
+    }
+    if (duel.state !== 'draw') return;
+
+    const ms = Math.round(performance.now() - duel.start);
+    let verdict;
+    if (ms < 200) verdict = 'Legendarisch. Ze maken een standbeeld van je.';
+    else if (ms < 250) verdict = 'Sneller dan de sheriff.';
+    else if (ms < 350) verdict = 'Snel genoeg. Dustwater is veilig vandaag.';
+    else if (ms < 500) verdict = 'Nipt overleefd. Je hoed heeft een gat.';
+    else verdict = 'Te traag. Dustwater zoekt een nieuwe sheriff.';
+
+    termPrint(`${ms} ms. ${verdict}`, ms < 500 ? 'term-ok' : 'term-err');
+
+    const best = readBest();
+    if (!best || ms < best) {
+        if (best) termPrint(`nieuw record! vorige beste: ${best} ms`);
+        saveBest(ms);
+    } else {
+        termPrint(`jouw record: ${best} ms`);
+    }
+
+    if (ms < 250) unlockAchievement('duel', 'Sneller dan de sheriff: duel gewonnen onder 250 ms');
+    endDuel();
+}
+
+document.addEventListener('keydown', (e) => {
+    if (duel.state === 'idle' || duel.state === 'intro') return;
+    if (e.key === 'Escape') {
+        termPrint('duel afgeblazen.');
+        endDuel();
+        return;
+    }
+    if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        shoot();
+    }
+});
+
+terminal.addEventListener('pointerdown', () => {
+    if (duel.state === 'ready' || duel.state === 'draw') shoot();
 });
 
 // ---------- Contact form: simpele validatie ----------

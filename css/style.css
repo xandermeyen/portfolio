@@ -765,6 +765,7 @@ a:hover { text-decoration: underline; }
 .term-cmd::before { content: 'xander@portfolio:~$ '; color: var(--accent); }
 .term-ok { color: var(--accent); }
 .term-err { color: var(--red); }
+.term-draw { color: var(--amber); font-weight: 800; font-size: 1.4rem; letter-spacing: 0.1em; }
 
 .terminal-input-row {
     display: flex;
