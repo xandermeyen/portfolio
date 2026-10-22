@@ -181,6 +181,7 @@ const commands = {
         'bureau-x.be ............ online escape room (live)\n' +
         'clickshot vzw .......... website voor fotoclub (klantopdracht)\n' +
         'airsoft tracker ........ blazor webapp (in ontwikkeling)\n' +
+        'sheriff survival ....... unity game (speelbaar op itch.io)\n' +
         'tower defense .......... c++ game (afgerond)\n' +
         'scroll omhoog voor de details.',
 
